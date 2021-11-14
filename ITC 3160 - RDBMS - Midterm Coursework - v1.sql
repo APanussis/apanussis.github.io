@@ -21,14 +21,20 @@ from worker join assign using (empID)
     	where assign.projNo = '1001'
 	order by 1;
 
---------
---DONE-- 6. Display details of the project with the highest budget.
---------
+-------------------------------------
+--Having some issues with the LIMIT-- 6. Display details of the project with the highest budget.
+-------------------------------------
 
 select * 
 from PROJECT
     order by budget desc
     limit 1;
+    
+---Maybe the following:
+--select * as "tempPROJECT"
+--from PROJECT
+--	order by budget desc
+--	limit 1;
 
 --------
 --DONE-- 7. Display the names and departments of all workers on project 1019.
